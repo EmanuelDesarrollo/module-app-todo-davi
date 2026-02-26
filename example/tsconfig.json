@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "module-app-todo-davi": ["../src/index"],
+      "module-app-todo-davi/*": ["../src/*"]
+    }
+  }
+}
