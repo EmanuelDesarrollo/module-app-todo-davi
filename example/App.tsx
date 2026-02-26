@@ -1,5 +1,5 @@
 import { useEvent } from 'expo';
-import ModuleAppTodoDavi, { AvatarView, ModuleAppTodoDaviView } from 'module-app-todo-davi';
+import { AvatarView } from 'module-app-todo-davi';
 import { ScrollView, Text, View } from 'react-native';
 
 export default function App() {

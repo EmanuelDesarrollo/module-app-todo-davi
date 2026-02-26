@@ -35,16 +35,5 @@ class ModuleAppTodoDaviModule : Module() {
         "value" to value
       ))
     }
-
-    // Enables the module to be used as a native view. Definition components that are accepted as part of
-    // the view definition: Prop, Events.
-    View(ModuleAppTodoDaviView::class) {
-      // Defines a setter for the `url` prop.
-      Prop("url") { view: ModuleAppTodoDaviView, url: URL ->
-        view.webView.loadUrl(url.toString())
-      }
-      // Defines an event that the view can send to JavaScript.
-      Events("onLoad")
-    }
   }
 }
