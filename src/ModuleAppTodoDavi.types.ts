@@ -4,6 +4,11 @@ export type OnLoadEventPayload = {
   url: string;
 };
 
+export type AvatarViewProps = {
+  name: string;
+  style?: StyleProp<ViewStyle>;
+};
+
 export type ModuleAppTodoDaviModuleEvents = {
   onChange: (params: ChangeEventPayload) => void;
 };

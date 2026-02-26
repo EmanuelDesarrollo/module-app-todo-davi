@@ -2,4 +2,5 @@
 // and on native platforms to ModuleAppTodoDaviModule.ts
 export { default } from './ModuleAppTodoDaviModule';
 export { default as ModuleAppTodoDaviView } from './ModuleAppTodoDaviView';
-export * from  './ModuleAppTodoDavi.types';
+export { default as AvatarView } from './AvatarView';
+export * from './ModuleAppTodoDavi.types';

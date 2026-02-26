@@ -1,40 +1,18 @@
 import { useEvent } from 'expo';
-import ModuleAppTodoDavi, { ModuleAppTodoDaviView } from 'module-app-todo-davi';
-import { Button, SafeAreaView, ScrollView, Text, View } from 'react-native';
+import ModuleAppTodoDavi, { AvatarView, ModuleAppTodoDaviView } from 'module-app-todo-davi';
+import { ScrollView, Text, View } from 'react-native';
 
 export default function App() {
-  const onChangePayload = useEvent(ModuleAppTodoDavi, 'onChange');
 
   return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView style={styles.container}>
-        <Text style={styles.header}>Module API Example</Text>
-        <Group name="Constants">
-          <Text>{ModuleAppTodoDavi.PI}</Text>
-        </Group>
-        <Group name="Functions">
-          <Text>{ModuleAppTodoDavi.hello()}</Text>
-        </Group>
-        <Group name="Async functions">
-          <Button
-            title="Set value"
-            onPress={async () => {
-              await ModuleAppTodoDavi.setValueAsync('Hello from JS!');
-            }}
-          />
-        </Group>
-        <Group name="Events">
-          <Text>{onChangePayload?.value}</Text>
-        </Group>
-        <Group name="Views">
-          <ModuleAppTodoDaviView
-            url="https://www.example.com"
-            onLoad={({ nativeEvent: { url } }) => console.log(`Loaded: ${url}`)}
-            style={styles.view}
-          />
-        </Group>
-      </ScrollView>
-    </SafeAreaView>
+    <ScrollView style={styles.container}>
+      <Text style={styles.header}>Module API Example</Text>
+      <Group name="AvatarView">
+        <AvatarView name="Santiago Lopez" style={styles.avatar} />
+        <AvatarView name="Ana García" style={styles.avatar} />
+        <AvatarView name="Carlos" style={styles.avatar} />
+      </Group>
+    </ScrollView>
   );
 }
 
@@ -51,6 +29,7 @@ const styles = {
   header: {
     fontSize: 30,
     margin: 20,
+    marginTop: 40,
   },
   groupHeader: {
     fontSize: 20,
@@ -69,5 +48,12 @@ const styles = {
   view: {
     flex: 1,
     height: 200,
+  },
+  avatarRow: {
+    flexDirection: 'row'
+  },
+  avatar: {
+    width: 60,
+    height: 60,
   },
 };

@@ -1,9 +1,19 @@
 {
-  "platforms": ["apple", "android", "web"],
+  "platforms": [
+    "apple",
+    "android",
+    "web"
+  ],
   "apple": {
-    "modules": ["ModuleAppTodoDaviModule"]
+    "modules": [
+      "ModuleAppTodoDaviModule",
+      "AvatarModule"
+    ]
   },
   "android": {
-    "modules": ["expo.modules.moduleapptododavi.ModuleAppTodoDaviModule"]
+    "modules": [
+      "expo.modules.moduleapptododavi.ModuleAppTodoDaviModule",
+      "expo.modules.moduleapptododavi.AvatarModule"
+    ]
   }
 }
